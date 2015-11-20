@@ -22,8 +22,8 @@ For this tutorial you are going to need:
 
 **Important:** Installation is not covered by this tutorial.
 
-## Tutorial
-TODO
+## Initial setup and project configuration
+We start by creating a new _Cordova project_ in Visual Studio.
 
 ## What we have learnt
 TODO
