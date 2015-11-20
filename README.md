@@ -25,5 +25,9 @@ For this tutorial you are going to need:
 ## Initial setup and project configuration
 We start by creating a new _Cordova project_ in Visual Studio.
 
+![New project on Visual Studio](/_items/vsnewproject.png)
+
+We can skip creating a folder for solution. So we now have a solution that we can use to build our app using HTML5, Javascript and CSS.
+
 ## What we have learnt
 TODO
