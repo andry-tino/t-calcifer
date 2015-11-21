@@ -1,25 +1,40 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!--
         Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
         For details, see http://go.microsoft.com/fwlink/?LinkID=617521
     -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-    <title>calcifer</title>
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'https://ecn.dev.virtualearth.net' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">-->
 
-    <!-- calcifer references -->
+    <title>calcifer (Tutorial)</title>
+
+    <!-- Stylesheets -->
     <link href="css/index.css" rel="stylesheet" />
-</head>
+
+    <!-- Scripts -->
+    <!-- Bing Maps -->
+    <script charset="UTF-8" type="text/javascript" src="https://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0&s=1"></script>
+    <!-- Adobe Edge web fonts -->
+    <script src="http://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;patua-one;istok-web.js"></script></head>
 <body>
-    <p>Hello, your application is ready!</p>
+    <div class="bar">
+        <span class="title">Calcifer</span>
+        <span class="mylocation">My Location</span>
+    </div>
+
+    <div class="top">
+        <span class="info">You are in: 12.23.345 - 12.23.345</span>
+    </div>
+
+    <div id="mapDiv" class="map-host"></div>
 
     <!-- Cordova reference, this is added to your app when it's built. -->
     <script src="cordova.js"></script>
     <script src="scripts/platformOverrides.js"></script>
-
     <script src="scripts/index.js"></script>
+    <!-- Custom scripts -->
+    <script src="scripts/map.js"></script>
 </body>
 </html>

@@ -29,5 +29,8 @@ We start by creating a new _Cordova project_ in Visual Studio.
 
 We can skip creating a folder for solution. So we now have a solution that we can use to build our app using HTML5, Javascript and CSS.
 
+## Setting pages and layouts
+We now move forward to creating some layout structures.
+
 ## What we have learnt
 TODO
