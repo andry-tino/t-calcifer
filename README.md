@@ -96,7 +96,7 @@ Now we can move to the content of our app!
 
 1. Locate tag `<body>`.
 2. Append on top the `<div>` element for the top bar: `<div class="bar"></div>`.
-3. Add another tag for message panel: <div class="top"></div>`.
+3. Add another tag for message panel: `<div class="top"></div>`.
 4. Add the tag for hosting the map: `<div id="mapDiv" class="map-host"></div>`.
 
 #### Focusing on the top bar
@@ -123,6 +123,8 @@ The message bar tag should  look like this:
 
 We have added `"Hello! I am ready!"` as the initial content to display.
 
+#### Finalizing
+
 The `<body>` should now look like this:
 
     <body>
@@ -140,7 +142,13 @@ The `<body>` should now look like this:
         ...
     </body>
 
-We have addedwhat we need in our page.
+The 3 elements we have introduced are what we need. If you refresh `index.html` in your browser, you will see that the page looks terrible! That's because we need to add styles. But that is not something HTML is responsible for, we need CSS!
+
+### Styling page parts
+Let's create a new file called `style.css` into `www/css`.
+
+1. Right click on the `css` folder in the _Solution Explorer_ and select _Add_ and then _New Item..._.
+2. Select _Style Sheet_ as file type and name it: `style.css`.
 
 ## Adding logic
 We now need to have this this working.
