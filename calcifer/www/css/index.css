@@ -80,6 +80,12 @@ body {
     margin-top: 11px;
     font-size: 11pt;
     padding: 4px 7px 4px 7px;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .info {
@@ -87,4 +93,7 @@ body {
     color: #464646;
     font-size: 15pt;
     padding: 10px;
+}
+
+.pin {
 }
