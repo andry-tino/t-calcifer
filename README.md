@@ -91,6 +91,7 @@ The tag should look like this:
 
 This title **will NOT be displayed**! Remember that everything that gets displayed reside into the `<body>` tag! In the `<head>` tag we have the settings of our app!
 
+#### Creating the main parts
 Now we can move to the content of our app!
 
 1. Locate tag `<body>`.
@@ -98,7 +99,7 @@ Now we can move to the content of our app!
 3. Add another tag for message panel: <div class="top"></div>`.
 4. Add the tag for hosting the map: `<div id="mapDiv" class="map-host"></div>`.
 
-Let's focus of the top bar.
+#### Focusing on the top bar
 
 1. In the first `div` we've added, add a tag for the title: `<span class="title">Calcifer</span>`.
 2. Now add another `<span>` for the button: `<span id="mylocationButton" class="mylocation">My Location</span>`.
@@ -110,7 +111,7 @@ The top bar should look like this:
         <span id="mylocationButton" class="mylocation">My Location</span>
     </div>
 
-Let's now focus on the message panel.
+#### Focusing on the message panel
 
 1. In the second `div` we created, add a `<span>` for the message panel: `<span id="message" class="info">Hello! I am ready!</span>`.
 
