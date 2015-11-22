@@ -108,4 +108,6 @@
   <preference name="ShowTitle" value="True" />
   <preference name="InAppBrowserStorageEnabled" value="True" />
   <preference name="SuppressesIncrementalRendering" value="True" />
+  <vs:plugin name="cordova-plugin-geolocation" version="1.0.1" />
+  <vs:plugin name="cordova-plugin-geolocation" version="1.0.1" />
 </widget>

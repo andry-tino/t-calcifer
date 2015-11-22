@@ -35,5 +35,19 @@ The next step is installing the [Geolocation plugin](https://github.com/apache/c
 ## Setting pages and layouts
 We now move forward to creating some layout structures.
 
+## Adding logic
+We now need to have this this working.
+
+### A bit about the algorithm
+This is the algorithm.
+
+![Requesting location](/_items/map1.png)
+
+And this is the rest
+
+![Getting location](/_items/map2.png)
+
+Funny stuff
+
 ## What we have learnt
 TODO

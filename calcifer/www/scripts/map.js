@@ -7,8 +7,12 @@
 (function () {
     "use strict";
 
+    // This will host the map object
     var map = null;
+    // This will tell us if we have access to location
     var locationAvailable = false;
+    // This will tell us when the system is busy retrieving location and we cannot perform other things
+    var busy = false;
 
     // Initializing
     window.addEventListener('load', function() {
@@ -42,6 +46,12 @@
         button.addEventListener('click', function () {
             var message = document.getElementById('message');
 
+            // Are we busy?
+            if (busy) {
+                message.textContent = 'Still working on it! Be patient...';
+                return;
+            }
+
             // If location is not available, display error message
             if (!locationAvailable) {
                 message.textContent = 'Location not available on this device!';
@@ -50,6 +60,8 @@
 
             // Displaying waiting message
             message.textContent = 'Working on it...';
+            // From now on we are busy
+            busy = true;
 
             // Get position
             window.navigator.geolocation.getCurrentPosition(
@@ -66,9 +78,15 @@
                     var displayLatitude = ('LT' + position.coords.latitude).substring(0, 10);
                     var displayLongitude = ('LG' + position.coords.longitude).substring(0, 10);
                     message.textContent = 'Your position: ' + displayLatitude + ' ' + displayLongitude;
+
+                    // No more busy
+                    busy = false;
                 },
                 function(error) {
                     message.textContent = 'An error occurred while retrieving your position!';
+
+                    // No more busy
+                    busy = false;
                 }
             );
         }, false);
