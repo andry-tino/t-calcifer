@@ -45,6 +45,18 @@ body {
         height: 100%;
     }
 
+    .bar .mylocation {
+        display: none;
+    }
+
+    .bar .titlemini {
+        display: inline;
+    }
+
+    .bar .title {
+        display: none;
+    }
+
     .top {
         margin-left: 50px;
         margin-top: 0;
@@ -54,13 +66,20 @@ body {
 }
 
 /* Text */
-.title {
+.title,
+.titlemini {
     font-family: patua-one, serif;
     font-size: 23pt;
     flex: 1 1 auto;
     align-self: center;
     color: #ffffff;
     padding-left: 7px;
+}
+
+.titlemini {
+    display: none;
+    position: absolute;
+    bottom: 0;
 }
 
 .mylocation,
