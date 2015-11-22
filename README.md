@@ -43,7 +43,7 @@ The next step is installing the [Geolocation plugin](https://github.com/apache/c
 4. Select _Geolocation_ in the list of plugins.
 5. Click on _Add_.
 
-![Cordova Geolocation plugin](/_items/location.png)
+![Cordova Geolocation plugin](/_items/geolocation.png)
 
 The process might take a while. After that the plugin should be marked as installed in the list.
 
