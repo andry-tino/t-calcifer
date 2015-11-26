@@ -10,9 +10,15 @@ If you do not have a Microsoft Live account (an account like `@outlook.com`, `@l
 ## Getting a developer key for using Bing Maps
 We need to log-in into the Bing Maps Portal.
 
-1. Navigate with your browser to the [Bing Maps Portal](https://www.bingmapsportal.com/). ![Bing Maps Portal](/_items/bing1.png)
-2. If you are not already logged in, you should see a button for signing in. In that case, click on _Sign In_. ![Bing Maps Portal](/_items/bing2.png)
-3. Type your Microsoft Account credentials and log-in.
+Navigate with your browser to the [Bing Maps Portal](https://www.bingmapsportal.com/). 
+
+![Bing Maps Portal](/_items/bing1.png)
+
+If you are not already logged in, you should see a button for signing in. In that case, click on _Sign In_. 
+
+![Bing Maps Portal](/_items/bing2.png)
+
+Type your Microsoft Account credentials and log-in.
 
 Once completing the logging, you are taken to your _Mapos Dev Center_ homepage.
 
@@ -26,12 +32,15 @@ You are brought to the list of currently active keys you have generated. It is p
 ### Creating a key
 To create a key, do as follows:
 
-1. Click on _Click here to create a new key_. ![Bing Maps Portal](/_items/bing4.png)
-2. Choose a name for the key, so type something like: `MyLocation App` in the _Application name_ field.
-3. Leave blank field _Application URL_.
-4. Select `Basic` in field _Key type_.
-5. Select `Dev/Test` in field _Application type_.
-6. Click on button _Create_.
+Click on _Click here to create a new key_.
+
+![Bing Maps Portal](/_items/bing4.png)
+
+1. Choose a name for the key, so type something like: `MyLocation App` in the _Application name_ field.
+2. Leave blank field _Application URL_.
+3. Select `Basic` in field _Key type_.
+4. Select `Dev/Test` in field _Application type_.
+5. Click on button _Create_.
 
 ![Bing Maps Portal](/_items/bing5.png)
 
