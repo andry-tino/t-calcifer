@@ -21,3 +21,9 @@ This tutorial has been designed for very beginners. A very basic knowledge of Ja
 
 ## Content
 Access to content.
+
+- Tutorial: [Building a cross-platform app](/Tutorial.md)
+- Side tutorial: [How to get a key for Bing Maps API](/BingMaps-Api.md)
+
+## Info & Credits
+This project is distributed under MIT license.
