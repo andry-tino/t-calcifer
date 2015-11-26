@@ -511,25 +511,25 @@ Define utility function for drawing pin:
 
 Place all these functions in the right place and define function `initializeInteractions`:
 
-(function () {
-    "use strict";
-
-    ...
-
-    var clearMap = function () { ... };
-    var drawCircle = function (radius, latitude, longitude) { ... };
-    var drawPin = function (latitude, longitude, accuracy) { ... };
-
-    var initializeMap = function() {
-        ...
-    };
-    var initializeLocationAvailability = function() {
-        ...
-    };
-    var initializeInteractions = function () {};
-
-    ...
-})();
+    (function () {
+      "use strict";
+  
+      ...
+  
+      var clearMap = function () { ... };
+      var drawCircle = function (radius, latitude, longitude) { ... };
+      var drawPin = function (latitude, longitude, accuracy) { ... };
+  
+      var initializeMap = function() {
+          ...
+      };
+      var initializeLocationAvailability = function() {
+          ...
+      };
+      var initializeInteractions = function () {};
+  
+      ...
+    })();
 
 ### The main logic
 Define the main logic:
