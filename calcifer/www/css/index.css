@@ -58,7 +58,7 @@ body {
 
     .top {
         margin-left: 50px;
-        margin-top: 0;
+        top: 0;
         width: 30%;
         height: 100%;
     }
@@ -82,22 +82,15 @@ body {
 }
 
 .mylocation {
-    padding: 3px;
     font-family: source-sans-pro, sans-serif;
-    font-size: 13pt;
+    font-size: 11pt;
     border: 1px solid #ffffff;
     color: #ffffff;
-}
-
-.mylocation {
-    position: absolute;
-    z-index: 4;
-    top: 0;
-    right: 12px;
-    margin-top: 11px;
-    font-size: 11pt;
+    margin-right: 12px;
+    align-self: center;
     padding: 4px 7px 4px 7px;
     cursor: pointer;
+    flex: 0 0 auto;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;

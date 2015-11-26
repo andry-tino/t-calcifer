@@ -313,6 +313,101 @@ This piece of code creates a structure which calls function `initializeMap` as s
 
 We do not need anything more. Try refreshing `index.html` after saving everything and you should see the map underneath the top bar and the info panel.
 
+## More styling
+We want to make the app look better. In fact, we need to style the title inside the top bar and the text inside the info panel. To do that, we add the following selectors in `index.css`:
+
+    .title {}
+    .mylocation {}
+    .info {}
+
+Again, let's focus on each one of them at a time.
+
+### The title
+Styling the title will require us to meet some requirements as we want the title to:
+
+- Be aligned to the left and be placed at the (vertical) middle of the bar.
+- Have a nice font.
+- Have white text.
+
+Meeting the alignment will require us to use a special CSS feature called [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/). We will not enter in details about Flexbox here, so if you want to know more, just follow the link!
+
+Flexbox gets pretty handy when we want to align elements. The first thing we need to do, is telling the container to enable Flex. So locate CSS selector `.bar` that we wrote before and add the following rule:
+
+    .bar {
+      ...
+      display: flex;
+    }
+
+Now we need to set some Flex rules to the element in the container; thus add the following rules to `.title`:
+
+    .title {
+      flex: 1 1 auto;       /* Allow the element to grow or shrink */
+      align-self: center;   /* Align the element to vertical middle */
+      color: #ffffff;       /* Text will be white */
+      padding-left: 7px;    /* Add some space on the left */
+    }
+
+We also added `padding-left` to have some space between the text and the left border, otherwise it would look bad.
+
+#### Applying a better font
+If you try to refresh `index.html`, you will see the changes. however the title still looks bad. We would like to change the font! Well, in the old days this was a very bad limit as web developers had to rely on the fonts installed on the user's computer; and of course no guarantees that font would have been there. A common set of well known fonts were used, but those fonts were very ugly and left not much to fantasy. Today we have font repositories in the Cloud hosted on many services. Like this, we do not have to worry about font availability anymore, as we will take fonts directly from the Internet, if the user has not those fonts installed, it is not a problem.
+
+One of those [Web Font](https://en.wikipedia.org/wiki/Web_typography) services is hosted by [Adobe](http://www.adobe.com/): [Adobe Web Fonts](https://edgewebfonts.adobe.com/). I will not enter in details about how to use the service. We will download 3 fonts from the Adobe repository:
+
+- Adobe [Source Sans Pro](https://edgewebfonts.adobe.com/fonts#/?collection=source-sans-pro)
+- Adobe [Patua One](https://edgewebfonts.adobe.com/fonts#/?collection=patua-one)
+- Adobe [Istok Web](https://edgewebfonts.adobe.com/fonts#/?collection=istok-web)
+
+We can reference these fonts by adding the following piece of code in `index.html` just in the `<head>` section (as the last line before closing tag `</head>`):
+
+    <script src="http://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;patua-one;istok-web.js"></script>
+
+Since we have included the fonts, we can now use them in `index.css` and complete the styling for title:
+
+    .title {
+      ...
+      font-family: patua-one, serif;  /* Use Adobe Patua One font */
+      font-size: 23pt;                /* Set size to 23 points */
+    }
+
+Try refreshing `index.html` and you will see our brand new title with nice font in the top bar.
+
+**Important!** We included two more fonts that we will use later in this tutorial.
+
+### The get-my-location button
+We now want to style element `<span id="mylocationButton" class="mylocation">My Location</span>`. This will be a button which the user can press. When the button is pressed, we will update the location on the map. Our button should have the following specifications:
+
+- Should be aligned to the right in the top bar and be placed at the middle of the bar.
+- Should be white with transparent background and white border.
+- When the mouse hovers on it, the pointer (hand, the icon that usually shows up when hovering on a link) icon should be shown.
+
+We can achieve this by means of the following rules:
+
+    .mylocation {
+      font-family: source-sans-pro, sans-serif;  /* Using Adobe Source Sans Pro font */
+      font-size: 11pt;                /* Font size to 11 points */
+      border: 1px solid #ffffff;      /* Applying a 1 pixel white border */
+      color: #ffffff;                 /* Setting color to white for the text */
+      margin-right: 12px;             /* Adding some space between the button and the right margin */
+      align-self: center;             /* Aligning to vertical middle */
+      padding: 4px 7px 4px 7px;       /* Defining inner spacing */
+      cursor: pointer;                /* Using the pointer cursor */
+      flex: 0 0 auto;                 /* Does not allow the element to shrink or grow */
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+The last 5 rules are all for the same reason: not allowing text to be selected as this is a button! This feature is still not fully supported in CSS, thus browsers prefix the rule with a special name specific for each browser. In order to ensure that all browsers apply this rule, we must include all prefixes. If a browser does not recognize a rule, it will not return an error, but will simply ignore the rule!
+
+Please note that we used a little trick here with flex to have the button be aligned to the right: `flex: 0 0 auto`. Since the title is allowed to grow, it will take all the space, while leaving our button only with the remaining one. Like this we make sure that the button is always on the right! You can check in developers tools in your browser:
+
+![CSS trick to align the button to the right](/_items/flex.png)
+
+Try refreshing the page. You should now see the button with a much better styling
+
 ## Adding logic
 We now need to have this this working.
 
