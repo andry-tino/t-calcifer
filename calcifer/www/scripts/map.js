@@ -14,13 +14,6 @@
     // This will tell us when the system is busy retrieving location and we cannot perform other things
     var busy = false;
 
-    // Initializing
-    window.addEventListener('load', function() {
-        initializeMap();
-        initializeInteractions();
-        initializeLocationAvailability();
-    }, false);
-
     var initializeMap = function() {
         map = new Microsoft.Maps.Map(
             document.getElementById('mapDiv'),
@@ -142,4 +135,11 @@
     var deg2rad = function() {
         
     };
+
+    // Initializing
+    window.addEventListener('load', function () {
+        initializeMap();
+        initializeInteractions();
+        initializeLocationAvailability();
+    }, false);
 })();
