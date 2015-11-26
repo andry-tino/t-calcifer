@@ -25,7 +25,7 @@
         map = new Microsoft.Maps.Map(
             document.getElementById('mapDiv'),
             {
-                credentials: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-xxxxx", /* Replace this string with your Bing maps key here */
+                credentials: "ArzkZ2pZslqT62hiKsqZ51c7qRjySokqJAUOG084nrZHSHXBESaOpN9631-9j6lo", /* Replace this string with your Bing maps key here */
                 center: new Microsoft.Maps.Location(45.5, -122.5),
                 mapTypeId: Microsoft.Maps.MapTypeId.road,
                 zoom: 7,
