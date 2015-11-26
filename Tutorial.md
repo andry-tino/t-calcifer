@@ -532,18 +532,71 @@ Place all these functions in the right place and define function `initializeInte
     })();
 
 ### The main logic
-Define the main logic:
+We now define the main logic. We follow two algorithms using the asynchronous mechanism.
 
-### A bit about the algorithm
-This is the algorithm.
+#### Requesting location
+To request location we act as follows:
 
 ![Requesting location](/_items/map1.png)
 
-And this is the rest
+#### Handling location
+Once we have the location, we can proceed as specifid below.
 
 ![Getting location](/_items/map2.png)
 
-Funny stuff
+#### The code
+The final code is:
+
+    var initializeInteractions = function () {
+      var button = document.getElementById('mylocationButton');
+      button.addEventListener('click', function () {
+        var message = document.getElementById('message');
+
+        // Are we busy?
+        if (busy) {
+          message.textContent = 'Still working on it! Be patient...';
+          return;
+        }
+
+        // If location is not available, display error message
+        if (!locationAvailable) {
+          message.textContent = 'Location not available on this device!';
+          return;
+        }
+
+        // Displaying waiting message
+        message.textContent = 'Working on it...';
+        // From now on we are busy
+        busy = true;
+
+        // Get position
+        window.navigator.geolocation.getCurrentPosition(
+          function (position) {
+            if (!position.coords) {
+                message.textContent = 'Wrong coordinates';
+                return;
+            }
+
+            // Adding pin
+            drawPin(position.coords.latitude, position.coords.longitude, position.coords.accuracy);
+
+            // Displaying message
+            var displayLatitude = ('LT' + position.coords.latitude).substring(0, 10);
+            var displayLongitude = ('LG' + position.coords.longitude).substring(0, 10);
+            message.textContent = 'Your position: ' + displayLatitude + ' ' + displayLongitude;
+
+            // No more busy
+            busy = false;
+          },
+          function (error) {
+            message.textContent = 'An error occurred while retrieving your position!';
+
+            // No more busy
+            busy = false;
+          }
+        );
+      }, false);
+    };
 
 ## What we have learnt
-TODO
+We have learnt how to use Visual Studio to build an app.
