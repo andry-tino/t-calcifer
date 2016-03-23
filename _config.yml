@@ -12,6 +12,13 @@ description: A tutorial for creating your first cross-platform app with Cordova 
 author: Andrea Tino
 baseurl: "/t-calcifer" # the subpath of your site, e.g. /blog
 url: "http://andry-tino.github.io" # the base hostname & protocol for your site
+
+repo_name: t-calcifer
+repo_url: "https://github.com/andry-tino/t-calcifer"
+repo_zip_url: "https://github.com/andry-tino/t-calcifer/zipball/master"
+repo_tar_url: "https://github.com/andry-tino/t-calcifer/tarball/master"
+repo_fork_url: "https://github.com/andry-tino/t-calcifer"
+
 twitter_username: _atino
 github_username:  andry-tino
 
