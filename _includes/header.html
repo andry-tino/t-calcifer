@@ -1,7 +1,15 @@
 <header>
   <h1>Miinimal</h1>
   <p>A Themes for GitHub Pages</p>
+  
+  <ul class="table-contents">
+    {% for post in site.posts %}
+      <li><a>{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+  
   <p class="view"><a href="http://github.com/orderedlist/minimal">View the Project on GitHub <small>orderedlist/minimal</small></a></p>
+  
   <ul>
     <li><a href="https://github.com/orderedlist/minimal/zipball/master">Download <strong>ZIP File</strong></a></li>
     <li><a href="https://github.com/orderedlist/minimal/tarball/master">Download <strong>TAR Ball</strong></a></li>

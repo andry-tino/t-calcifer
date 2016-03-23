@@ -120,6 +120,12 @@ header ul {
   width:270px;
 }
 
+header ul.table-contents {
+  background: transparent;
+  border-radius: 0;
+  border-width: 0;
+}
+
 header li {
   width:89px;
   float:left;
@@ -267,4 +273,9 @@ footer {
     font-size:12pt;
     color:#444;
   }
+}
+
+div#sideContent {
+  width: 500px;
+  float: right;
 }
