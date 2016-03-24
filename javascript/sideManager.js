@@ -43,7 +43,7 @@ var sideManager = function() {
         }
       );
     });
-    req.open('POST', url, true);
+    req.open('GET', url, true);
     req.send();
   };
   
