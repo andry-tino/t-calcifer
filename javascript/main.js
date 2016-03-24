@@ -16,7 +16,7 @@ var main = function() {
     for (var i = 0; i < anchors.length; i++) {
       (function() { // Variable in scope for closure
         var datahref = anchors[i].getAttribute('data-href');
-        if (!datahref) continue;
+        if (!datahref) return;
         
         anchors[i].addEventListener('click', function(e) {
           sideManager().loadPage(datahref, function(e) {
