@@ -138,13 +138,19 @@ header ul {
   padding: 0;
 }
 
-heander .table-contents {
+header .table-contents {
   overflow-y: scroll;
   max-height: 75px;
 }
 
 header .table-contents li a {
   cursor: pointer;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 200px;
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: middle;
 }
 
 .icon {

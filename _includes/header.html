@@ -6,7 +6,7 @@
     {% for post in site.categories.post %}
       <li>
         <span class="material-icons icon">&#xE866;</span>
-        <a data-href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <a data-href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">{{ post.title }}</a>
         </li>
     {% endfor %}
   </ul>
