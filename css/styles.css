@@ -139,7 +139,7 @@ header ul {
 }
 
 header .table-contents {
-  overflow-y: scroll;
+  overflow-y: auto;
   max-height: 75px;
 }
 
