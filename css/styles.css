@@ -133,6 +133,10 @@ header ul {
   margin-left: 15px;
 }
 
+.icon {
+  margin-right: 7px;
+}
+
 header ul.download-chimes li {
   width:89px;
   float:left;
