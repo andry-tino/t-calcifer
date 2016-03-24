@@ -2,10 +2,10 @@
   <h1>{{ site.title }}</h1>
   <p>{{ site.description }}</p>
   
-  <ul>
+  <ul class="table-contents">
     {% for post in site.categories.post %}
       <li>
-        <a class="material-icons icon">&#xE157;</a>
+        <a class="material-icons icon">&#xE866;</a>
         <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </li>
     {% endfor %}

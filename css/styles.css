@@ -134,8 +134,13 @@ header ul {
   background: transparent;
   border-radius: 0;
   border-width: 0;
-  margin-left: 15px;
+  margin-left: 10px;
   padding: 0;
+}
+
+heander .table-contents {
+  overflow-y: scroll;
+  max-height: 75px;
 }
 
 .icon {
