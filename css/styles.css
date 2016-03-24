@@ -143,6 +143,10 @@ heander .table-contents {
   max-height: 75px;
 }
 
+header .table-contents li a {
+  cursor: pointer;
+}
+
 .icon {
   margin-right: 7px;
   vertical-align: middle;
