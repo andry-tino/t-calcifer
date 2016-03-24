@@ -14,15 +14,17 @@ var main = function() {
     var anchors = ul.getElementsByTagName('a');
     
     for (var i = 0; i < anchors.length; i++) {
-      var datahref = anchors[i].getAttribute('data-href');
-      if (!datahref) continue;
-      
-      anchors[i].addEventListener('click', function(e) {
-        sideManager().loadPage(datahref, function(e) {
-          // Argument `e` contains fetched data
-          sideContent.innerHTML = e.content;
+      (function() { // Variable in scope for closure
+        var datahref = anchors[i].getAttribute('data-href');
+        if (!datahref) continue;
+        
+        anchors[i].addEventListener('click', function(e) {
+          sideManager().loadPage(datahref, function(e) {
+            // Argument `e` contains fetched data
+            sideContent.innerHTML = e.content;
+          });
         });
-      });
+      })();
     }
   };
   
