@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 20px;
 }
 
-p, ul, ol, table, pre, dl {
+p, ul, ol, table, dl {
   margin: 0 0 20px;
 }
 
@@ -69,13 +69,15 @@ blockquote {
   font-style:italic;
 }
 
-code, pre {
+code, 
+:not(pre) pre {
   font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
   color:#333;
   font-size:12px;
 }
 
-pre {
+:not(pre) pre {
+  margin: 0 0 20px;
   padding:8px 15px;
   background: #f8f8f8;
   border-radius:5px;
@@ -279,7 +281,8 @@ footer {
     position:static;
   }
 
-  pre, code {
+  code,
+  :not(pre) pre {
     word-wrap:normal;
   }
 }
