@@ -1,4 +1,8 @@
-var sideManager = (function() {
+/**
+ * Responsible for loading articles in the side area.
+ */
+
+var sideManager = function() {
   var _status = {
     OK: 0,
     ERROR: 1
@@ -47,4 +51,4 @@ var sideManager = (function() {
     STATUS: _status,
     loadPage: _loadPage
   }
-})();
+};

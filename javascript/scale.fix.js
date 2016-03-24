@@ -1,5 +1,9 @@
-(function() {
-  window.addEventListener('load', function(e) {
+/**
+ * Scale fix for handling devices.
+ */
+
+var scaleFix = function() {
+  var _initialize = function() {
     var metas = document.getElementsByTagName('meta');
     var i;
 
@@ -19,5 +23,9 @@
       }
       document.addEventListener("gesturestart", gestureStart, false);
     }
-  });
-})();
+  };
+  
+  return {
+    initialize: _initialize
+  };
+};
