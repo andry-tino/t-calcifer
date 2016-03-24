@@ -17,6 +17,10 @@ p, ul, ol, table, dl {
   margin: 0 0 20px;
 }
 
+pre table {
+  margin-bottom: 0;
+}
+
 p.project-info {
   margin: 0 0 10px;
 }
@@ -98,7 +102,7 @@ th, td {
 
 pre th,
 pre td {
-  padding: 0;
+  padding: 0 10px;
   border: none;
 }
 
