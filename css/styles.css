@@ -10,11 +10,15 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color:#222;
-  margin:0 0 20px;
+  margin: 0 0 20px;
 }
 
 p, ul, ol, table, pre, dl {
-  margin:0 0 20px;
+  margin: 0 0 20px;
+}
+
+p.project-info {
+  margin: 0 0 10px;
 }
 
 h1, h2, h3 {
@@ -116,7 +120,6 @@ header {
 }
 
 header ul.download-chimes {
-  list-style:none;
   height:40px;
   padding:0;
   background: #f4f4f4;
@@ -127,14 +130,17 @@ header ul.download-chimes {
 }
 
 header ul {
+  list-style:none;
   background: transparent;
   border-radius: 0;
   border-width: 0;
   margin-left: 15px;
+  padding: 0;
 }
 
 .icon {
   margin-right: 7px;
+  vertical-align: middle;
 }
 
 header ul.download-chimes li {
