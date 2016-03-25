@@ -123,6 +123,21 @@ img {
   max-width:100%;
 }
 
+footer ul.social-media-list {
+  list-style: none;
+  margin-left: 0;
+ }
+ 
+footer .icon > svc {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+footer .icon > svc path {
+  fill: #828282;
+}
+
 header.post-header {
   width: 100%;
   position: static;
@@ -157,6 +172,7 @@ header ul {
 header .table-contents {
   overflow-y: auto;
   max-height: 75px;
+  margin-bottom: 30px;
 }
 
 header .table-contents li a {

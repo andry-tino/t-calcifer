@@ -1,4 +1,13 @@
 <footer>
+  <ul class="social-media-list">
+    <li>
+      {% include icon-github.html username=site.github_username %}
+    </li>
+    <li>
+      {% include icon-twitter.html username=site.twitter_username %}
+    </li>
+  </ul>
+  
   <p class="project-info">Project maintained by <a href="{{ site.author_url }}">{{ site.author }}</a></p>
   <p><small>Theme forked from <a href="{{ site.theme_forked_url }}">{{ site.theme_forked }}</a></small></p>
 </footer>
