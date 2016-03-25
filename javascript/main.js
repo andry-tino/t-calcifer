@@ -21,7 +21,11 @@ var main = function() {
         anchors[i].addEventListener('click', function(e) {
           sideManager().loadPage(datahref, function(e) {
             // Argument `e` contains fetched data
+            // Placing content
             sideContent.innerHTML = e.content;
+            
+            // Causing the page to scroll up
+            document.body.scrollTop = 0;
           });
         });
       })();
