@@ -132,7 +132,6 @@ footer .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
-  vertical-align: middle;
 }
 footer .icon > svg path {
   fill: #828282;
@@ -186,8 +185,8 @@ header .table-contents li a {
 }
 
 .icon {
-  margin-right: 7px;
-  vertical-align: middle;
+  margin-right: 4px;
+  vertical-align: top;
 }
 
 header ul.download-chimes li {
