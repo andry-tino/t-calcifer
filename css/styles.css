@@ -90,8 +90,12 @@ figure > pre {
 }
 
 table {
-  width:100%;
-  border-collapse:collapse;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+pre table {
+  width: auto;
 }
 
 th, td {
