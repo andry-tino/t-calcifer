@@ -24,8 +24,8 @@ repo_fork_url: "https://github.com/andry-tino/t-calcifer"
 twitter_username: _atino
 github_username:  andry-tino
 
-theme_forked_url: "https://github.com/orderedlist"
-theme_forked: orderedlist
+theme_forked_url: "https://github.com/andry-tino/minimal"
+theme_forked: "orderedlist/minimal"
 
 # Build settings
 markdown: kramdown
