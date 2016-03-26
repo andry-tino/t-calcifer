@@ -41,7 +41,7 @@ var main = function() {
       e.stopPropagation();
       
        _loadPage(datahref);
-    });
+    }, true);
   };
   
   var _initialize = function() {
