@@ -56,10 +56,6 @@ var main = function() {
 
 // Initializing
 (function() {
-  // Do not need loading complete
-  SocialShareKit.init(); // Social media kit
-  
-  // Need loading complete
   window.addEventListener('load', function(e) {
     main().initialize();
   });
