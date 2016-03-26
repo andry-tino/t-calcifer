@@ -29,7 +29,7 @@ var main = function() {
     /* Place a handler in the body to process a click on anchors. 
     If the anchor has a data-href defined, then go to that link 
     in the side-content! */
-    document.body.addEventListener('click', function(e) {
+    window.addEventListener('click', function(e) {
       var target = e.target;
       if (target.tagName.toLowerCase !== 'a') return;
       
