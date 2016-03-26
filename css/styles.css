@@ -168,6 +168,10 @@ header ul {
   padding: 0;
 }
 
+header > h1 > a {
+  color: #222222;
+}
+
 header .table-contents {
   overflow-y: auto;
   max-height: 75px;
