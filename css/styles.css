@@ -172,6 +172,10 @@ header > h1 > a {
   color: #222222;
 }
 
+header .social-media {
+  margin-top: 5px;
+}
+
 header .table-contents {
   overflow-y: auto;
   max-height: 75px;
