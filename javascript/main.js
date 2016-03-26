@@ -40,7 +40,7 @@ var main = function() {
       e.preventDefault();
       e.stopPropagation();
       
-       _loadPage(datahref);
+       _loadPage(href);
     });
   };
   
