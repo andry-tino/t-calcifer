@@ -3,33 +3,45 @@
  */
 
 var main = function() {
+  var _loadPage = function(url) {
+    sideManager().loadPage(url, function(e) {
+      // Argument `e` contains fetched data
+      // Placing content
+      sideContent.innerHTML = e.content;
+      
+      // Causing the page to scroll up
+      document.body.scrollTop = 0;
+    });
+  };
+  
+  var _isPostPage = function(url) {
+    var re = /post\//;
+    return url.match(re) !== null;
+  };
+  
   var _initializeScaleFix = function() {
     scaleFix().initialize();
   };
   
   var _initializeNavigation = function() {
     var sideContent = document.getElementById('sideContent');
-  
-    var ul = document.getElementsByClassName('table-contents')[0];
-    var anchors = ul.getElementsByTagName('a');
     
-    for (var i = 0; i < anchors.length; i++) {
-      (function() { // Variable in scope for closure
-        var datahref = anchors[i].getAttribute('data-href');
-        if (!datahref) return;
-        
-        anchors[i].addEventListener('click', function(e) {
-          sideManager().loadPage(datahref, function(e) {
-            // Argument `e` contains fetched data
-            // Placing content
-            sideContent.innerHTML = e.content;
-            
-            // Causing the page to scroll up
-            document.body.scrollTop = 0;
-          });
-        });
-      })();
-    }
+    /* Place a handler in the body to process a click on anchors. 
+    If the anchor has a data-href defined, then go to that link 
+    in the side-content! */
+    document.body.addEventListener('click', function(e) {
+      var target = e.target;
+      if (target.tagName.toLowerCase !== 'a') return;
+      
+      var href = target.getAttribute('href');
+      if (!href) return;
+      if (!_isPostPage(href)) return;
+      
+      e.preventDefault();
+      e.stopPropagation();
+      
+       _loadPage(datahref);
+    });
   };
   
   var _initialize = function() {

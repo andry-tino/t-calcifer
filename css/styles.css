@@ -175,7 +175,6 @@ header .table-contents {
 }
 
 header .table-contents li a {
-  cursor: pointer;
   text-overflow: ellipsis;
   overflow: hidden;
   max-width: 200px;
