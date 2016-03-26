@@ -191,6 +191,10 @@ header .table-contents li a {
   vertical-align: middle;
 }
 
+header .view {
+  margin: 0 0 0 20px;
+}
+
 .icon {
   margin-right: 1px;
   vertical-align: middle;
