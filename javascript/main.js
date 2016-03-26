@@ -31,7 +31,7 @@ var main = function() {
     in the side-content! */
     window.addEventListener('click', function(e) {
       var target = e.target;
-      if (target.tagName.toLowerCase !== 'a') return;
+      if (target.tagName.toLowerCase() !== 'a') return;
       
       var href = target.getAttribute('href');
       if (!href) return;
@@ -41,7 +41,7 @@ var main = function() {
       e.stopPropagation();
       
        _loadPage(datahref);
-    }, true);
+    });
   };
   
   var _initialize = function() {
