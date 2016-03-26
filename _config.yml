@@ -27,5 +27,8 @@ github_username:  andry-tino
 theme_forked_url: "https://github.com/andry-tino/minimal"
 theme_forked: "orderedlist/minimal"
 
+socialmedia_url: "https://github.com/darklow/social-share-kit"
+socialmedia: "Social Share Kit"
+
 # Build settings
 markdown: kramdown
